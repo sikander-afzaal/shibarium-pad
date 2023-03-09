@@ -12,7 +12,7 @@ const App = () => {
         <Route element={<Landing />} path="/" />
         <Route element={<Details />} path="/details" />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
