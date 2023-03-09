@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const [headerToggle, setHeaderToggle] = useState(true);
+  const [headerToggle, setHeaderToggle] = useState(false);
   return (
     <header className="wrapper py-6 fixed top-0 left-0 border-b border-solid border-white">
       {headerToggle && (
