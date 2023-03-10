@@ -44,3 +44,11 @@
     @apply text-[30px] xl:text-[46px]  font-bold grText bg-yellowGr;
   }
 }
+.splide__arrow svg {
+  height: 28px;
+  width: 28px;
+}
+.is-active > div {
+  border-color: #ffbf02;
+  transform: scale(1);
+}
