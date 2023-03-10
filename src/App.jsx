@@ -12,7 +12,7 @@ const App = () => {
         <Route element={<Landing />} path="/" />
         <Route element={<DetailsIndex />} path="/details" />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

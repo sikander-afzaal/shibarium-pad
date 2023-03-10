@@ -9,6 +9,7 @@ module.exports = {
       },
       backgroundImage: {
         yellowGr: "linear-gradient(90deg, #FFC301 0%, #FF9B01 105.95%)",
+        tab: "linear-gradient(180deg, rgba(255, 193, 1, 0) 0%, #FFC101 100%)",
         heroImg: 'url("/hero-bg.png")',
         heroRight:
           "linear-gradient(180deg, #FFC101 31.21%, rgba(255, 195, 1, 0) 99.06%)",
