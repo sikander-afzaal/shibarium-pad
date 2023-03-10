@@ -1,6 +1,6 @@
 @font-face {
   font-family: Gilroy;
-  src: url("/public/fonts/Gilroy-Bold.woff2") format("woff2");
+  src: url("/fonts/Gilroy-Bold.woff2") format("woff2");
   font-weight: 700;
 }
 @font-face {
@@ -39,5 +39,8 @@
   }
   .title {
     @apply text-[30px] xl:text-[46px]  font-bold text-white;
+  }
+  .grTitle {
+    @apply text-[30px] xl:text-[46px]  font-bold grText bg-yellowGr;
   }
 }

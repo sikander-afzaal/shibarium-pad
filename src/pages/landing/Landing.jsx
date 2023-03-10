@@ -1,6 +1,8 @@
+import Brand from "./Brand";
 import Funds from "./Funds";
 import Hero from "./Hero";
 import How from "./How";
+import Upcoming from "./Upcoming";
 
 const Landing = () => {
   return (
@@ -8,6 +10,8 @@ const Landing = () => {
       <Hero />
       <Funds />
       <How />
+      <Upcoming />
+      <Brand />
     </>
   );
 };
