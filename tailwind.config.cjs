@@ -15,6 +15,8 @@ module.exports = {
         rotatedCard: "linear-gradient(180deg, #192952 0%, #04102E 100%)",
         whiteBg:
           "linear-gradient(190.15deg, rgba(255,255,255,0.9) 62.68%, rgba(255, 255, 255, 0) 160.95%)",
+        yellowStripe:
+          "linear-gradient(180deg, #FFBC03 0%, #FFBC03 0.01%, rgba(255, 188, 3, 0) 100%)",
       },
       colors: {
         "primary-bg": "#041435",
