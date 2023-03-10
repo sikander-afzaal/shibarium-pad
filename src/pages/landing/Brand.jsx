@@ -91,7 +91,7 @@ export default Brand;
 
 const BrandCard = () => {
   return (
-    <div className="border transition-all duration-500 scale-[0.85] border-transparent flex justify-start items-start flex-col p-3 rounded-[10px] border-solid gap-3 w-full max-w-[440px]">
+    <div className="bg-white bg-opacity-10 border transition-all duration-500 scale-[0.85] border-transparent flex justify-start items-start flex-col p-3 rounded-[10px] border-solid gap-3 w-full max-w-[440px]">
       <img
         src="/hero-nft.png"
         className="rounded-[10px] w-full aspect-[1/0.7] object-cover"
