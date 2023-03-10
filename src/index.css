@@ -5,17 +5,17 @@
 }
 @font-face {
   font-family: Gilroy;
-  src: url("/public/fonts/Gilroy-Medium.woff2") format("woff2");
+  src: url("/fonts/Gilroy-Medium.woff2") format("woff2");
   font-weight: 500;
 }
 @font-face {
   font-family: Gilroy;
-  src: url("/public/fonts/Gilroy-Semibold.woff2") format("woff2");
+  src: url("/fonts/Gilroy-Semibold.woff2") format("woff2");
   font-weight: 600;
 }
 @font-face {
   font-family: Gilroy;
-  src: url("/public/fonts/Gilroy-Regular.woff2") format("woff2");
+  src: url("/fonts/Gilroy-Regular.woff2") format("woff2");
   font-weight: 400;
 }
 
@@ -33,5 +33,11 @@
   }
   .contain {
     @apply flex w-[90%] max-w-[1220px];
+  }
+  .grText {
+    @apply bg-clip-text text-transparent;
+  }
+  .title {
+    @apply text-[30px] xl:text-[46px]  font-bold text-white;
   }
 }

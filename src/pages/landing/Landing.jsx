@@ -1,5 +1,13 @@
+import Funds from "./Funds";
+import Hero from "./Hero";
+
 const Landing = () => {
-  return <div>Landing</div>;
+  return (
+    <>
+      <Hero />
+      <Funds />
+    </>
+  );
 };
 
 export default Landing;
