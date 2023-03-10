@@ -1,6 +1,7 @@
 const Launched = () => {
   return (
-    <div className="wrapper mt-[75px] sm:mt-[100px] xl:mt-[250px] 2xl:mt-[350px]">
+    <div className="wrapper mt-[75px] sm:mt-[100px] xl:mt-[250px] 2xl:mt-[350px] relative isolate overflow-hidden">
+      <div className="bg-yellowStripe w-[190px] h-[490px] opacity-70 rotate-[43.83deg] md:block hidden absolute right-0 bottom-[50%] xl:bottom-[20%] -z-10"></div>
       <div className="contain flex-col justify-center items-center">
         <h2 className="title">
           Launched <span className="grText bg-yellowGr">Projects</span>

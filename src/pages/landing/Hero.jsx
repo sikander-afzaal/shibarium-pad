@@ -2,7 +2,7 @@ import Button from "../../components/Button";
 
 const Hero = () => {
   return (
-    <div className="wrapper relative bg-heroImg bg-contain bg-no-repeat bg-left mt-[109px]">
+    <div className="wrapper relative bg-heroImg bg-contain bg-no-repeat bg-top lg:bg-left mt-[109px]">
       <div className="contain lg:flex-row flex-col justify-between items-start gap-14 xl:gap-20">
         <div className="flex justify-start items-center sm:text-left text-center sm:items-start flex-col gap-5 sm:gap-10 w-full pt-10 lg:pt-20">
           <button className="bg-white border-none  rounded-[10px] px-6 py-4 uppercase text-text font-medium">

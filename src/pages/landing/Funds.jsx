@@ -1,9 +1,9 @@
 const Funds = () => {
   return (
-    <div className="wrapper  lg:mt-[250px] relative py-[80px] sm:py-[150px]">
+    <div className="wrapper  lg:mt-[130px] relative py-[80px] sm:py-[150px]">
       <img
         src="/wave.png"
-        className="absolute -z-10 max-h-[8000px] sm:block hidden top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-full  object-cover"
+        className="absolute -z-10 max-h-[8000px] sm:block hidden top-1/2  xl:top-0 -translate-y-1/2 xl:-translate-y-[10%] left-1/2 -translate-x-1/2 w-full  object-cover"
         alt=""
       />
       <div className="contain gap-10 flex-col justify-center items-center text-center">

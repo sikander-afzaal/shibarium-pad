@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="wrapper mt-[200px] border-t border-solid border-white">
+    <footer className="wrapper  border-t border-solid border-white">
       <div className="contain xl:flex-row flex-col gap-5 xl:gap-0 justify-between items-center py-4">
         <p className="text-white text-center text-sm sm:text-lg">
           Copyright © 2023 Ordinal Pad. All Rights Reserves

@@ -2,7 +2,7 @@ import Button from "../../components/Button";
 
 const How = () => {
   return (
-    <div className="wrapper isolate relative mt-[0px] lg:mt-[60px] xl:mt-[100px]">
+    <div className="wrapper isolate relative mt-[0px] lg:mt-[60px] 2xl:mt-[200px]">
       <div className="bg-yellowStripe w-[190px] h-[490px] opacity-70 -rotate-[43.83deg] md:block hidden absolute left-0 bottom-[30%] lg:bottom-0 -z-10"></div>
       <div className="contain lg:flex-row flex-col justify-start items-center gap-16 sm:gap-[120px]">
         <div className="relative w-[90%] sm:w-auto isolate">
