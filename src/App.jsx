@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
-import Details from "./pages/details/Details";
+import DetailsIndex from "./pages/details/DetailsIndex";
 import Landing from "./pages/landing/Landing";
 
 const App = () => {
@@ -10,9 +10,9 @@ const App = () => {
       <Header />
       <Routes>
         <Route element={<Landing />} path="/" />
-        <Route element={<Details />} path="/details" />
+        <Route element={<DetailsIndex />} path="/details" />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
