@@ -6,16 +6,16 @@ import Join from "./Join";
 import Launched from "./Launched";
 import Upcoming from "./Upcoming";
 
-const Landing = () => {
+const Landing = ({ content }) => {
   return (
     <div className="relative w-full overflow-hidden pb-[150px]">
-      <Hero />
-      <Funds />
-      <How />
-      <Upcoming />
-      <Brand />
-      <Launched />
-      <Join />
+      <Hero content={content.hero} />
+      <Funds content={content.funds} />
+      <How content={content.how} />
+      <Upcoming content={content.upcoming} />
+      <Brand content={content.brand} />
+      <Launched content={content.launched} />
+      <Join content={content.sale} />
     </div>
   );
 };

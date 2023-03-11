@@ -1,4 +1,4 @@
-const Funds = () => {
+const Funds = ({ content }) => {
   return (
     <div className="wrapper  lg:mt-[130px] relative py-[80px] sm:py-[150px]">
       <img
@@ -8,14 +8,15 @@ const Funds = () => {
       />
       <div className="contain gap-10 flex-col justify-center items-center text-center">
         <h2 className="title">
-          Raised Funds to Build within the{" "}
-          <span className="grText bg-yellowGr">Ordinal</span> Ecosystem
+          {content.title}{" "}
+          <span className="grText bg-yellowGr">{content.titleGr}</span>{" "}
+          {content.titleEnd}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full gap-8">
-          <FundBox value={"$0"} desc="Total Raised" />
-          <FundBox value={"0"} desc="Tokens Funded" />
-          <FundBox value={"$0"} desc="Total MKT Cap" />
-          <FundBox value={"0"} desc="Total Participants" />
+          <FundBox value={"$0"} desc={content.box1} />
+          <FundBox value={"0"} desc={content.box2} />
+          <FundBox value={"$0"} desc={content.box3} />
+          <FundBox value={"0"} desc={content.box4} />
         </div>
       </div>
     </div>

@@ -1,27 +1,37 @@
 import Button from "../../components/Button";
 
-const Upcoming = () => {
+const Upcoming = ({ content }) => {
   return (
     <div className="wrapper overflow-hidden relative isolate mt-[80px] lg:mt-[150px]">
       <div className="bg-yellowStripe w-[190px] h-[490px] opacity-70 rotate-[43.83deg] md:block hidden absolute right-0 bottom-[50%] xl:bottom-0 -z-10"></div>
       <div className="contain flex-col justify-center items-center gap-4">
-        <h2 className="title">Upcoming Projects</h2>
+        <h2 className="title">{content.title}</h2>
         <p className="dark:text-white text-black text-center text-lg opacity-80">
-          We bring in some of the most vetted and successful projects within the
-          Ordinal Ecosystem
+          {content.sub}
         </p>
         <div className="grid-cols-1 grid place-items-center xl:grid-cols-3 mt-5 w-full gap-10 xl:gap-8">
-          <ProjectBox img="/hero-nft.png" name="Ordinal Pad #01" />
-          <ProjectBox img="/hero-nft.png" name="Ordinal Pad #01" />
-          <ProjectBox img="/hero-nft.png" name="Ordinal Pad #01" />
+          <ProjectBox
+            translation={content}
+            img="/hero-nft.png"
+            name="Ordinal Pad #01"
+          />
+          <ProjectBox
+            translation={content}
+            img="/hero-nft.png"
+            name="Ordinal Pad #01"
+          />
+          <ProjectBox
+            translation={content}
+            img="/hero-nft.png"
+            name="Ordinal Pad #01"
+          />
         </div>
         <div className="flex justify-center items-center gap-4 lg:flex-row flex-col text-center mt-14">
           <p className="dark:text-white text-black text-center text-lg opacity-80">
-            Providing a platform to assist with the most innovative ordinal
-            projects
+            {content.note}
           </p>
           <Button>
-            See all{" "}
+            {content.btn1}{" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -45,14 +55,22 @@ const Upcoming = () => {
 
 export default Upcoming;
 
-const ProjectBox = ({ img, time, name, starting, price, allocation }) => {
+const ProjectBox = ({
+  img,
+  time,
+  name,
+  starting,
+  price,
+  allocation,
+  translation,
+}) => {
   return (
     <div className="flex flex-col max-w-[380px] justify-start items-center w-full p-2 rounded-[10px] bg-white bg-opacity-5 border  border-solid border-[#FFBD02]">
       <div className="relative">
         <img src={img} className="w-full aspect-video object-cover" alt="" />
         <div className="flex absolute bottom-3 left-1/2 -translate-x-1/2 px-0 py-2 justify-between items-center w-[90%] bg-white dark:bg-text rounded-[10px]">
           <div className="dark:text-white text-black flex w-full justify-center items-center flex-col gap-2 border-r border-solid border-[#4B506D] ">
-            <p className=" text-sm font-medium">Days:</p>
+            <p className=" text-sm font-medium">{translation.days}:</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -69,7 +87,7 @@ const ProjectBox = ({ img, time, name, starting, price, allocation }) => {
             </svg>
           </div>
           <div className="dark:text-white text-black flex justify-center w-full items-center flex-col gap-2 border-r border-solid border-[#4B506D] ">
-            <p className=" text-sm font-medium">Hours:</p>
+            <p className=" text-sm font-medium">{translation.hours}:</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -86,7 +104,7 @@ const ProjectBox = ({ img, time, name, starting, price, allocation }) => {
             </svg>
           </div>
           <div className="dark:text-white text-black flex justify-center w-full items-center flex-col gap-2 border-r border-solid border-[#4B506D] ">
-            <p className=" text-sm font-medium">Minutes:</p>
+            <p className=" text-sm font-medium">{translation.min}:</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -103,7 +121,7 @@ const ProjectBox = ({ img, time, name, starting, price, allocation }) => {
             </svg>
           </div>
           <div className="dark:text-white text-black flex justify-center w-full items-center flex-col gap-2 ">
-            <p className=" text-sm font-medium">Seconds:</p>
+            <p className=" text-sm font-medium">{translation.sec}:</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -125,7 +143,7 @@ const ProjectBox = ({ img, time, name, starting, price, allocation }) => {
         <div className="flex justify-between w-full items-center gap-2">
           <p className="text-[#1877F2] text-[22px] font-bold">$OPAD</p>
           <p className="dark:text-white text-black text-lg">
-            Starting: <strong>04.01.2023</strong>
+            {translation.date}: <strong>04.01.2023</strong>
           </p>
         </div>
         <h5 className=" grText bg-yellowGr mb-1 text-[26px] font-bold">
@@ -133,14 +151,14 @@ const ProjectBox = ({ img, time, name, starting, price, allocation }) => {
         </h5>
         <div className="flex sm:items-center justify-between items-start flex-col sm:flex-row gap-2 w-full">
           <p className="dark:text-white text-black opacity-80 text-lg">
-            Price per Token: <strong> XXXX</strong>
+            {translation.price}: <strong> XXXX</strong>
           </p>
           <p className="dark:text-white text-black opacity-80 text-lg">
-            Allocation: XX
+            {translation.allocation}: XX
           </p>
         </div>
         <div className="self-center -mt-3 translate-y-1/2">
-          <Button>Token Sale</Button>
+          <Button>{translation.btnCard}</Button>
         </div>
       </div>
     </div>

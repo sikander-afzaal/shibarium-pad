@@ -1,27 +1,27 @@
 import Button from "../../components/Button";
 
-const Hero = () => {
+const Hero = ({ content }) => {
   return (
     <div className="wrapper relative bg-heroImg bg-contain bg-no-repeat bg-top lg:bg-left mt-[109px]">
       <div className="contain lg:flex-row flex-col justify-between items-start gap-14 xl:gap-20">
         <div className="flex justify-start items-center sm:text-left text-center sm:items-start flex-col gap-5 sm:gap-10 w-full pt-10 lg:pt-20">
           <button className="bg-text dark:bg-white border-none  rounded-[10px] px-6 py-4 uppercase text-white dark:text-text font-medium">
-            Launchpad
+            {content.btn1}
           </button>
           <h2 className="leading-[1.3] text-[30px] sm:text-[46px] xl:text-[56px] font-bold dark:text-white text-black">
-            Get early access to the best projects within the{" "}
-            <span className=" bg-yellowGr grText ">Ordinal Ecosystem</span>
+            {content.title}{" "}
+            <span className=" bg-yellowGr grText ">{content.titleGr}</span>
           </h2>
           <p className="leading-[1] text-black dark:text-[rgba(255,255,255,0.8)] text-lg ">
-            Vetted projects that will drive the future the of{" "}
+            {content.sub}{" "}
             <span className="grText bg-yellowGr font-semibold">
-              Bitcoin Ordinal Ecosystem
+              {content.subGr}
             </span>
           </p>
           <div className="flex justify-start w-full sm:flex-row flex-col items-center gap-5">
-            <Button classes={"w-full sm:w-[182px]"}>Submit Project</Button>
-            <Button disabled classes={"w-full sm:w-[182px]"}>
-              Join Presales
+            <Button classes={"w-full sm:w-auto"}>{content.btn2}</Button>
+            <Button disabled classes={"w-full sm:w-auto"}>
+              {content.btn3}
             </Button>
           </div>
           <div className="flex justify-start sm:flex-row flex-col items-center gap-5">
@@ -29,24 +29,24 @@ const Hero = () => {
               <h3 className="text-[46px] font-bold text-yellow leading-[1]">
                 0
               </h3>
-              <p className="text-base font-medium dark:text-white text-black">
-                PROJECTS FUNDED
+              <p className="text-base uppercase font-medium dark:text-white text-black">
+                {content.value1}
               </p>
             </div>
             <div className="flex justify-start gap-2  items-center sm:items-start flex-col">
               <h3 className="text-[46px] font-bold text-yellow leading-[1]">
                 0
               </h3>
-              <p className="text-base font-medium dark:text-white text-black">
-                PROJECTS MKT CAP
+              <p className="text-base uppercase font-medium dark:text-white text-black">
+                {content.value2}
               </p>
             </div>
             <div className="flex justify-start gap-2  items-center sm:items-start flex-col">
               <h3 className="text-[46px] font-bold text-yellow leading-[1]">
                 0
               </h3>
-              <p className="text-base font-medium dark:text-white text-black">
-                UNIQUE PARTCIPANTS
+              <p className="text-base uppercase font-medium dark:text-white text-black">
+                {content.value3}
               </p>
             </div>
           </div>
@@ -62,7 +62,7 @@ const Hero = () => {
                 alt=""
               />
               <p className="w-full max-w-[271px] absolute z-10 bottom-0 left-1/2 -translate-x-1/2 backdrop-blur-[42px] bg-whiteBg  flex justify-center text-lg items-center py-3 rounded-tr-[5px] rounded-tl-[5px]">
-                Featured Project
+                {content.cardText.imgText}
               </p>
             </div>
             <div className="flex pb-3 px-2 justify-start items-start flex-col  gap-4">
@@ -71,7 +71,7 @@ const Hero = () => {
                   Ordinal Pad #01
                 </h4>
                 <p className="dark:text-white text-black text-lg">
-                  Starting: <strong>04.01.2023</strong>
+                  {content.cardText.date}: <strong>04.01.2023</strong>
                 </p>
               </div>
               <h5 className="flex justify-start items-center gap-2 dark:text-white text-black text-[22px] font-semibold">
@@ -83,23 +83,22 @@ const Hero = () => {
                 />
               </h5>
               <p className="text-base leading-[1.4] sm:text-lg dark:text-white text-black opacity-80">
-                The Ultimate Launchpad Created Exclusively For The Bitcoin
-                Ordinal Ecosystem.
+                {content.cardText.desc}
               </p>
               <div className="flex w-full flex-col sm:flex-row justify-start items-center gap-4">
-                <Button classes={"w-full sm:w-[152px] h-[50px]"}>
-                  Token Sale
+                <Button classes={"w-full sm:w-auto h-[50px]"}>
+                  {content.cardText.btn1}
                 </Button>
-                <Button disabled classes={"w-full sm:w-[152px] h-[50px]"}>
-                  Buy Here
+                <Button disabled classes={"w-full sm:w-auto h-[50px]"}>
+                  {content.cardText.btn2}
                 </Button>
               </div>{" "}
               <div className="flex sm:items-center justify-between items-start flex-col sm:flex-row gap-2 w-full">
                 <p className="dark:text-white text-black opacity-80 text-lg">
-                  Price per Token: <strong> $0.004</strong>
+                  {content.cardText.price}: <strong> $0.004</strong>
                 </p>
                 <p className="dark:text-white text-black opacity-80 text-lg">
-                  Allocation: NO
+                  {content.cardText.allocation}: NO
                 </p>
               </div>
             </div>

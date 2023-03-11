@@ -1,4 +1,4 @@
-const Join = () => {
+const Join = ({ content }) => {
   return (
     <div className="wrapper">
       <div className="contain mt-[80px] xl:mt-[150px] isolate flex-col justify-center items-center gap-8 text-center rounded-[15px] px-2 bg-yellowGr relative py-[50px]">
@@ -8,14 +8,14 @@ const Join = () => {
           alt=""
         />
         <h2 className="text-[30px] xl:text-[46px]  font-bold text-white">
-          Never want to miss a sale?
+          {content.title}
         </h2>
         <button
           className={
             "bg-white disabled:cursor-not-allowed flex justify-center items-center leading-[1] rounded-[10px] p-5 text-dark border-none font-semibold text-lg  "
           }
         >
-          Join Our Community
+          {content.btn}
         </button>
       </div>
     </div>

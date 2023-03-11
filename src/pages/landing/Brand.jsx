@@ -2,21 +2,21 @@ import Button from "../../components/Button";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 
-const Brand = () => {
+const Brand = ({ content }) => {
   return (
     <div className="wrapper relative isolate mt-[100px] xl:mt-[250px] ">
       <img
         src="/brand.png"
-        className="absolute -z-10 max-h-[1000px] sm:block hidden top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-full  object-cover"
+        className="absolute pointer-events-none -z-10 max-h-[1000px] sm:block hidden top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-full  object-cover"
         alt=""
       />
       <div className="contain xl:flex-row flex-col gap-16 xl:gap-0 justify-between items-center ">
         <div className="flex w-full justify-start items-center text-center xl:text-left xl:items-start flex-col gap-4">
           <button className="bg-white border-none  rounded-[10px] px-6 py-4 uppercase text-text font-medium">
-            Launchpad
+            {content.btn1}
           </button>
-          <h2 className="grTitle">Brand Ambassadors</h2>
-          <Button disabled>See All</Button>
+          <h2 className="grTitle">{content.title}</h2>
+          <Button disabled>{content.btn2}</Button>
         </div>
         <div className="w-full max-w-[650px] xl:mt-0 mt-12">
           <Splide
@@ -39,10 +39,10 @@ const Brand = () => {
           >
             <SplideTrack>
               <SplideSlide>
-                <BrandCard />
+                <BrandCard translation={content.followers} />
               </SplideSlide>
               <SplideSlide>
-                <BrandCard />
+                <BrandCard translation={content.followers} />
               </SplideSlide>
             </SplideTrack>
 
@@ -89,7 +89,7 @@ const Brand = () => {
 
 export default Brand;
 
-const BrandCard = () => {
+const BrandCard = ({ translation }) => {
   return (
     <div className="bg-white bg-opacity-10 border transition-all duration-500 scale-[0.85] border-transparent flex justify-start items-start flex-col p-3 rounded-[10px] border-solid gap-3 w-full max-w-[440px]">
       <img
@@ -102,7 +102,7 @@ const BrandCard = () => {
           Ordinal | @OrdianalGems
         </h3>
         <p className="text-xl font-semibold dark:text-white text-black">
-          148.5K Followers
+          148.5K {translation}
         </p>
       </div>
     </div>

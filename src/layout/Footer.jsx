@@ -1,22 +1,22 @@
-const Footer = () => {
+const Footer = ({ content }) => {
   return (
     <footer className="wrapper  border-t border-solid border-text dark:border-white">
       <div className="contain xl:flex-row flex-col gap-5 xl:gap-0 justify-between items-center py-4">
         <p className="dark:text-white text-black text-center text-sm sm:text-lg">
-          Copyright © 2023 Ordinal Pad. All Rights Reserves
+          {content.copyright}
         </p>
         <div className="flex justify-center items-center gap-5">
           <a
             className="dark:text-white text-black text-base sm:text-lg"
             href="#"
           >
-            Docs
+            {content.link1}
           </a>
           <a
             className="dark:text-white text-black text-base sm:text-lg"
             href="#"
           >
-            Blogs
+            {content.link2}
           </a>
         </div>
         <div className="flex justify-center items-center gap-4">
@@ -36,10 +36,10 @@ const Footer = () => {
             className="dark:text-white text-black text-base sm:text-lg"
             href="#"
           >
-            Terms & Conditions Privacy Policy
+            {content.link3}
           </a>
           <a className="dark:text-white text-black text-base sm:-lg" href="#">
-            Privacy Policy
+            {content.link4}
           </a>
         </div>
       </div>

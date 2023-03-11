@@ -1,15 +1,16 @@
-const Launched = () => {
+const Launched = ({ content }) => {
   return (
     <div className="wrapper mt-[75px] sm:mt-[100px] xl:mt-[250px] 2xl:mt-[350px] relative isolate overflow-hidden">
       <div className="bg-yellowStripe w-[190px] h-[490px] opacity-70 rotate-[43.83deg] md:block hidden absolute right-0 bottom-[50%] xl:bottom-[20%] -z-10"></div>
       <div className="contain flex-col justify-center items-center">
         <h2 className="title">
-          Launched <span className="grText bg-yellowGr">Projects</span>
+          {content.title}{" "}
+          <span className="grText bg-yellowGr">{content.titleGr}</span>
         </h2>
         <div className="grid grid-cols-1 place-items-center xl:grid-cols-3 w-full gap-8 mt-8">
-          <LaunchedBox img={"/hero-nft.png"} />
-          <LaunchedBox img={"/hero-nft.png"} />
-          <LaunchedBox img={"/hero-nft.png"} />
+          <LaunchedBox img={"/hero-nft.png"} translate={content} />
+          <LaunchedBox img={"/hero-nft.png"} translate={content} />
+          <LaunchedBox img={"/hero-nft.png"} translate={content} />
         </div>
       </div>
     </div>
@@ -18,7 +19,7 @@ const Launched = () => {
 
 export default Launched;
 
-const LaunchedBox = ({ img }) => {
+const LaunchedBox = ({ img, translate }) => {
   return (
     <div className="flex flex-col max-w-[380px] justify-start items-center w-full p-2 rounded-[10px] bg-white bg-opacity-5 border  border-solid border-[#FFBD02]">
       <div className="relative">
@@ -58,15 +59,15 @@ const LaunchedBox = ({ img }) => {
           The ultimate launchpad designed exclusively for the Ordinal Ecosystem
         </p>
         <p className="dark:text-white text-black opacity-80 text-lg">
-          Total Raised: <strong> XXXX</strong>
+          {translate.raised}: <strong> XXXX</strong>
         </p>
 
         <div className="flex sm:items-center justify-between items-start flex-col sm:flex-row gap-2 w-full">
           <p className="dark:text-white text-black opacity-80 text-lg">
-            Participants: <strong> XXXX</strong>
+            {translate.participants}: <strong> XXXX</strong>
           </p>
           <p className="dark:text-white text-black opacity-80 text-lg">
-            Ended: 28/02/2023
+            {translate.ended}: 28/02/2023
           </p>
         </div>
       </div>

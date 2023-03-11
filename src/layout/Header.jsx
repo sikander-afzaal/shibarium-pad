@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ language, setLanguage, content }) => {
   const [headerToggle, setHeaderToggle] = useState(false);
   const [darkMode, setDarkMode] = useState(true);
   useEffect(() => {
@@ -34,23 +34,49 @@ const Header = () => {
             to={"/"}
             className="text-white  font-normal text-lg"
           >
-            Home
+            {content.link1}
           </Link>
           <Link
             onClick={() => setHeaderToggle(false)}
             to={"/"}
             className="text-white  font-normal text-lg"
           >
-            Projects
+            {content.link2}
           </Link>
           <div className="flex justify-center items-center flex-col relative">
-            <button className="text-dark p-4 text-lg font-semibold bg-yellowGr rounded-lg border-none flex justify-center items-center gap-3">
-              EN{" "}
-              <img src="/flag.png" className="w-[37px] object-contain" alt="" />
+            <button
+              onClick={() => {
+                if (language === "EN") {
+                  setLanguage("GER");
+                } else {
+                  setLanguage("EN");
+                }
+              }}
+              className="text-dark p-4 text-lg font-semibold bg-yellowGr rounded-lg border-none flex justify-center items-center gap-3"
+            >
+              {language === "EN" ? (
+                <>
+                  EN
+                  <img
+                    src="/flag.png"
+                    className="w-[37px] object-contain"
+                    alt=""
+                  />
+                </>
+              ) : (
+                <>
+                  GER
+                  <img
+                    src="/flag2.png"
+                    className="w-[37px] object-contain"
+                    alt=""
+                  />
+                </>
+              )}
             </button>
           </div>
           <button className="text-dark p-4 text-lg font-semibold bg-yellowGr rounded-lg border-none flex justify-center items-center gap-3">
-            Connect Wallet
+            {content.connect}
           </button>
           <button
             onClick={() => setDarkMode((prev) => !prev)}
