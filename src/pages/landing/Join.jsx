@@ -7,7 +7,9 @@ const Join = () => {
           className="w-full h-full absolute left-1/2 -translate-x-1/2 top-0 object-cover -z-10"
           alt=""
         />
-        <h2 className="title">Never want to miss a sale?</h2>
+        <h2 className="text-[30px] xl:text-[46px]  font-bold text-white">
+          Never want to miss a sale?
+        </h2>
         <button
           className={
             "bg-white disabled:cursor-not-allowed flex justify-center items-center leading-[1] rounded-[10px] p-5 text-dark border-none font-semibold text-lg  "

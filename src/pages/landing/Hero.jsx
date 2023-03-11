@@ -5,14 +5,14 @@ const Hero = () => {
     <div className="wrapper relative bg-heroImg bg-contain bg-no-repeat bg-top lg:bg-left mt-[109px]">
       <div className="contain lg:flex-row flex-col justify-between items-start gap-14 xl:gap-20">
         <div className="flex justify-start items-center sm:text-left text-center sm:items-start flex-col gap-5 sm:gap-10 w-full pt-10 lg:pt-20">
-          <button className="bg-white border-none  rounded-[10px] px-6 py-4 uppercase text-text font-medium">
+          <button className="bg-text dark:bg-white border-none  rounded-[10px] px-6 py-4 uppercase text-white dark:text-text font-medium">
             Launchpad
           </button>
-          <h2 className="leading-[1.3] text-[30px] sm:text-[46px] xl:text-[56px] font-bold text-white">
+          <h2 className="leading-[1.3] text-[30px] sm:text-[46px] xl:text-[56px] font-bold dark:text-white text-black">
             Get early access to the best projects within the{" "}
             <span className=" bg-yellowGr grText ">Ordinal Ecosystem</span>
           </h2>
-          <p className="leading-[1] text-[rgba(255,255,255,0.8)] text-lg ">
+          <p className="leading-[1] text-black dark:text-[rgba(255,255,255,0.8)] text-lg ">
             Vetted projects that will drive the future the of{" "}
             <span className="grText bg-yellowGr font-semibold">
               Bitcoin Ordinal Ecosystem
@@ -29,7 +29,7 @@ const Hero = () => {
               <h3 className="text-[46px] font-bold text-yellow leading-[1]">
                 0
               </h3>
-              <p className="text-base font-medium text-white">
+              <p className="text-base font-medium dark:text-white text-black">
                 PROJECTS FUNDED
               </p>
             </div>
@@ -37,7 +37,7 @@ const Hero = () => {
               <h3 className="text-[46px] font-bold text-yellow leading-[1]">
                 0
               </h3>
-              <p className="text-base font-medium text-white">
+              <p className="text-base font-medium dark:text-white text-black">
                 PROJECTS MKT CAP
               </p>
             </div>
@@ -45,7 +45,7 @@ const Hero = () => {
               <h3 className="text-[46px] font-bold text-yellow leading-[1]">
                 0
               </h3>
-              <p className="text-base font-medium text-white">
+              <p className="text-base font-medium dark:text-white text-black">
                 UNIQUE PARTCIPANTS
               </p>
             </div>
@@ -53,7 +53,7 @@ const Hero = () => {
         </div>
         <div className="flex pt-0 sm:pt-20 justify-start items-center flex-col relative isolate w-full ">
           <div className="w-full  h-full absolute sm:block hidden -z-20 left-0 top-0 bg-heroRight opacity-50"></div>
-          <div className="bg-rotatedCard sm:block hidden opacity-50 rounded-[15px] -rotate-[5.81deg] h-full w-full max-w-[442px] absolute top-20 -z-10 left-1/2 -translate-x-1/2"></div>
+          <div className=" bg-rotatedCard dark:sm:block hidden opacity-50 rounded-[15px] -rotate-[5.81deg] h-full w-full max-w-[442px] absolute top-20 -z-10 left-1/2 -translate-x-1/2"></div>
           <div className="bg-white bg-opacity-5 border-2 border-solid border-[#FFC300]  rounded-[15px]  w-full max-w-[442px] p-2 flex justify-start items-start flex-col gap-3 overflow-hidden">
             <div className="relative w-full">
               <img
@@ -70,11 +70,11 @@ const Hero = () => {
                 <h4 className="text-yellow text-[26px] font-bold">
                   Ordinal Pad #01
                 </h4>
-                <p className="text-white text-lg">
+                <p className="dark:text-white text-black text-lg">
                   Starting: <strong>04.01.2023</strong>
                 </p>
               </div>
-              <h5 className="flex justify-start items-center gap-2 text-white text-[22px] font-semibold">
+              <h5 className="flex justify-start items-center gap-2 dark:text-white text-black text-[22px] font-semibold">
                 $OPAD{" "}
                 <img
                   src="/check.png"
@@ -82,7 +82,7 @@ const Hero = () => {
                   alt=""
                 />
               </h5>
-              <p className="text-base leading-[1.4] sm:text-lg text-white opacity-80">
+              <p className="text-base leading-[1.4] sm:text-lg dark:text-white text-black opacity-80">
                 The Ultimate Launchpad Created Exclusively For The Bitcoin
                 Ordinal Ecosystem.
               </p>
@@ -95,10 +95,12 @@ const Hero = () => {
                 </Button>
               </div>{" "}
               <div className="flex sm:items-center justify-between items-start flex-col sm:flex-row gap-2 w-full">
-                <p className="text-white opacity-80 text-lg">
+                <p className="dark:text-white text-black opacity-80 text-lg">
                   Price per Token: <strong> $0.004</strong>
                 </p>
-                <p className="text-white opacity-80 text-lg">Allocation: NO</p>
+                <p className="dark:text-white text-black opacity-80 text-lg">
+                  Allocation: NO
+                </p>
               </div>
             </div>
           </div>

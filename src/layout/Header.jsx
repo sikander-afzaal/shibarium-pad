@@ -1,8 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   const [headerToggle, setHeaderToggle] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
   return (
     <header className="wrapper bg-primary-bg z-[50] py-6 fixed top-0 left-0 border-b border-solid border-white">
       {headerToggle && (
@@ -12,7 +21,9 @@ const Header = () => {
         ></div>
       )}
       <nav className="contain justify-between items-center">
-        <h2 className="text-white font-bold text-[38px]">LOGO HERE</h2>
+        <Link to={"/"}>
+          <h2 className="text-white  font-bold text-[38px]">LOGO HERE</h2>
+        </Link>
         <div
           className={`lg:flex-row flex-col lg:p-0 pb-[3rem] overflow-y-auto lg:overflow-visible pt-[7rem] px-[3rem] flex justify-start items-center sm:items-start lg:items-center gap-6 ${
             headerToggle ? "right-0" : "-right-[600px]"
@@ -21,14 +32,14 @@ const Header = () => {
           <Link
             onClick={() => setHeaderToggle(false)}
             to={"/"}
-            className="text-white font-normal text-lg"
+            className="text-white  font-normal text-lg"
           >
             Home
           </Link>
           <Link
             onClick={() => setHeaderToggle(false)}
             to={"/"}
-            className="text-white font-normal text-lg"
+            className="text-white  font-normal text-lg"
           >
             Projects
           </Link>
@@ -41,21 +52,41 @@ const Header = () => {
           <button className="text-dark p-4 text-lg font-semibold bg-yellowGr rounded-lg border-none flex justify-center items-center gap-3">
             Connect Wallet
           </button>
-          <button className="bg-transparent border border-white border-solid rounded-lg w-[76px] h-[60px] flex justify-center items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="#FF9F02"
-              className="w-8 h-8"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-              />
-            </svg>
+          <button
+            onClick={() => setDarkMode((prev) => !prev)}
+            className="bg-transparent border border-white border-solid rounded-lg w-[76px] h-[60px] flex justify-center items-center"
+          >
+            {darkMode ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="#FF9F02"
+                className="w-8 h-8"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="#FF9F02"
+                className="w-8 h-8"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+                />
+              </svg>
+            )}
           </button>
         </div>
         {headerToggle ? (

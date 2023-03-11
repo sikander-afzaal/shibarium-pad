@@ -24,7 +24,7 @@
 @tailwind utilities;
 @layer base {
   body {
-    @apply bg-primary-bg;
+    @apply bg-white dark:bg-primary-bg;
   }
 }
 @layer utilities {
@@ -38,7 +38,7 @@
     @apply bg-clip-text text-transparent;
   }
   .title {
-    @apply text-[30px] xl:text-[46px]  font-bold text-white;
+    @apply text-[30px] xl:text-[46px]  font-bold dark:text-white text-black;
   }
   .grTitle {
     @apply text-[30px] xl:text-[46px]  font-bold grText bg-yellowGr;

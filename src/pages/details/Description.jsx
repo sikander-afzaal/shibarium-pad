@@ -4,7 +4,7 @@ import Button from "../../components/Button";
 const Description = () => {
   const [tab, setTab] = useState("desc");
   return (
-    <div className="mt-[100px] lg:mb-[13vw] 2xl:mb-[350px] wrapper relative isolate">
+    <div className="mt-[100px]  bg-descBg bg-cover lg:bg-contain bg-center lg:mb-[13vw] 2xl:mb-[350px] wrapper relative isolate">
       <img
         src="/desc-wave.png"
         className="absolute lg:block hidden top-0 left-1/2 -translate-x-1/2 object-cover w-full -z-10"
@@ -14,7 +14,7 @@ const Description = () => {
         <div className="w-full mb-5 flex justify-center md:justify-start items-center border-b border-solid border-[#737373]">
           <button
             onClick={() => setTab("desc")}
-            className={`relative isolate bg-transparent text-2xl sm:text-[28px] font-medium px-5 sm:px-7 pb-3 text-white ${
+            className={`relative isolate bg-transparent text-2xl sm:text-[28px] font-medium px-5 sm:px-7 pb-3 dark:text-white text-black ${
               tab === "desc"
                 ? "border-b-2 border-solid border-[#FFC101]"
                 : "border-none"
@@ -27,7 +27,7 @@ const Description = () => {
           </button>
           <button
             onClick={() => setTab("token")}
-            className={`relative isolate bg-transparent text-2xl sm:text-[28px] font-medium px-5 sm:px-7 pb-3 text-white ${
+            className={`relative isolate bg-transparent text-2xl sm:text-[28px] font-medium px-5 sm:px-7 pb-3 dark:text-white text-black ${
               tab === "token"
                 ? "border-b-2 border-solid border-[#FFC101]"
                 : "border-none"
@@ -43,7 +43,7 @@ const Description = () => {
           <span className="grText bg-yellowGr">Ordinal Pad</span> is the perfect
           launchpad for the Ordinal ecosystem for several reasons:
         </h2>
-        <p className="text-white opacity-80 text-lg">
+        <p className="dark:text-white text-black opacity-80 text-lg">
           - Firstly, it is an user-friendly and secure platform that allows
           users to easily participate in Ordinal's most promising projects
           before they launch. Because of our platform's simple and intuitive
@@ -51,7 +51,7 @@ const Description = () => {
           navigate the platform and start participating in projects without any
           technical knowledge.
         </p>
-        <p className="text-white opacity-80 text-lg">
+        <p className="dark:text-white text-black opacity-80 text-lg">
           - Secondly, Ordinal Pad has integrated various features that make it
           easy for users to stake their tokens in order to earn a generous
           yield, while they are waiting for new project launches.. Additionally,
@@ -59,21 +59,23 @@ const Description = () => {
           constantly working to improve the platform, adding new features and
           optimizing existing ones.
         </p>
-        <p className="text-white opacity-80 text-lg">
+        <p className="dark:text-white text-black opacity-80 text-lg">
           Overall, Ordinal Pad's accessibility, user-friendly interface, and
           robust features set make it the perfect launchpad for the Ordinal
           ecosystem.
         </p>
         <Button>Whitepaper</Button>
         <div className="flex md:flex-row flex-col justify-between gap-3 md:gap-0 items-center w-full">
-          <p className="text-white font-semibold text-lg">
+          <p className="dark:text-white text-black font-semibold text-lg">
             Tags:{" "}
             <span className="grText bg-yellowGr">
               #featured #ordinal #bone #launchpad #artnft
             </span>
           </p>
           <div className="flex justify-start items-center gap-5">
-            <p className="text-white font-semibold text-lg">Socials:</p>
+            <p className="dark:text-white text-black font-semibold text-lg">
+              Socials:
+            </p>
             <a href="#" target="blank" className="w-5 object-contain">
               <img src="/twitter-gold.png" alt="" />
             </a>

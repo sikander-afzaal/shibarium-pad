@@ -26,7 +26,7 @@ const LaunchedBox = ({ img }) => {
       </div>
       <div className="flex justify-start items-start flex-col gap-1 mt-4 px-2 w-full">
         <div className="flex justify-between w-full items-center gap-2">
-          <h3 className="text-white gap-2 flex justify-start items-center  text-[22px] font-bold">
+          <h3 className="dark:text-white text-black gap-2 flex justify-start items-center  text-[22px] font-bold">
             $???{" "}
             <img
               src="/check-yellow.png"
@@ -54,18 +54,20 @@ const LaunchedBox = ({ img }) => {
         <h5 className=" grText bg-yellowGr mb-1 text-[26px] font-bold">
           Coming Soon
         </h5>
-        <p className="text-white">
+        <p className="dark:text-white text-black">
           The ultimate launchpad designed exclusively for the Ordinal Ecosystem
         </p>
-        <p className="text-white opacity-80 text-lg">
+        <p className="dark:text-white text-black opacity-80 text-lg">
           Total Raised: <strong> XXXX</strong>
         </p>
 
         <div className="flex sm:items-center justify-between items-start flex-col sm:flex-row gap-2 w-full">
-          <p className="text-white opacity-80 text-lg">
+          <p className="dark:text-white text-black opacity-80 text-lg">
             Participants: <strong> XXXX</strong>
           </p>
-          <p className="text-white opacity-80 text-lg">Ended: 28/02/2023</p>
+          <p className="dark:text-white text-black opacity-80 text-lg">
+            Ended: 28/02/2023
+          </p>
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
@@ -11,6 +12,8 @@ module.exports = {
         yellowGr: "linear-gradient(90deg, #FFC301 0%, #FF9B01 105.95%)",
         tab: "linear-gradient(180deg, rgba(255, 193, 1, 0) 0%, #FFC101 100%)",
         heroImg: 'url("/hero-bg.png")',
+        descBg: 'url("/desc-bg.png")',
+        detailsHero: 'url("/details-hero-bg.png")',
         heroRight:
           "linear-gradient(180deg, #FFC101 31.21%, rgba(255, 195, 1, 0) 99.06%)",
         rotatedCard: "linear-gradient(180deg, #192952 0%, #04102E 100%)",

@@ -98,10 +98,12 @@ const BrandCard = () => {
         alt=""
       />
       <div className="px-2 flex justify-start items-start flex-col gap-2">
-        <h3 className="text-white text-xl font-semibold">
+        <h3 className="dark:text-white text-black text-xl font-semibold">
           Ordinal | @OrdianalGems
         </h3>
-        <p className="text-xl font-semibold text-white">148.5K Followers</p>
+        <p className="text-xl font-semibold dark:text-white text-black">
+          148.5K Followers
+        </p>
       </div>
     </div>
   );
