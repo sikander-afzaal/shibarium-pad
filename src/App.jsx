@@ -43,7 +43,18 @@ const App = () => {
           }
           path="/"
         />
-        <Route element={<DetailsIndex />} path="/details" />
+        <Route
+          element={
+            <DetailsIndex
+              content={
+                language === "EN"
+                  ? content.english.projectDetails
+                  : content.german.projectDetails
+              }
+            />
+          }
+          path="/details"
+        />
       </Routes>
       <Footer
         content={

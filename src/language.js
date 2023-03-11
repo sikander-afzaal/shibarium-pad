@@ -79,6 +79,37 @@ export const language = {
         btn: "Join Our Community",
       },
     },
+    projectDetails: {
+      hero: {
+        title: "Project Details",
+        desc: "The Ultimate Launchpad Designed Exclusively For The Ordinal Ecosystem",
+        owner: "Owner",
+        chain: "Blockchain",
+        address: "Contract Address",
+        id: "Token ID",
+        standard: "Token Standard",
+        fees: "Contract Fees",
+        time: "Launch Time",
+        btn1: "Chart",
+        btn2: "Buy Now",
+      },
+      desc: {
+        tab1: "Description",
+        tab2: "Token Sale",
+        titleGr: "Oridnal Pad",
+        title:
+          "is the perfect launchpad for the Ordinal ecosystem for several reasons:",
+        para1:
+          "- Firstly, it is an user-friendly and secure platform that allows users to easily participate in Ordinal's most promising projects before they launch. Because of our platform's simple and intuitive design, even those who are new to cryptocurrency and DeFi can easily navigate the platform and start participating in projects without any technical knowledge.",
+        para2:
+          "- Secondly, Ordinal Pad has integrated various features that make it easy for users to stake their tokens in order to earn a generous yield, while they are waiting for new project launches.. Additionally, we are building a strong community of users and developers who are constantly working to improve the platform, adding new features and optimizing existing ones.",
+        para3:
+          "Overall, Ordinal Pad's accessibility, user-friendly interface, and robust features set make it the perfect launchpad for the Ordinal ecosystem.",
+        btn1: "Whitepaper",
+        tags: "Tags",
+        social: "Socials",
+      },
+    },
   },
   german: {
     header: {
@@ -159,6 +190,37 @@ export const language = {
       sale: {
         title: "Du willst keinen Sale verpassen?",
         btn: "tritt unserer Gemeinschaft bei",
+      },
+    },
+    projectDetails: {
+      hero: {
+        title: "Projekt Details",
+        desc: "Das ultimative Launchpad, das exklusiv für das Ordinal-Ökosystem entwickelt wurde",
+        owner: "Eigentümer",
+        chain: "Blockchain",
+        address: "Vertragsadresse",
+        id: "Token-ID",
+        standard: "Token-Standard",
+        fees: "Vertragsgebühren",
+        time: "Startzeit",
+        btn1: "Diagramm",
+        btn2: "Kaufe jetzt",
+      },
+      desc: {
+        tab1: "Beschreibung",
+        tab2: "Token-Verkauf",
+        titleGr: "Oridnal Pad",
+        title:
+          "ist aus mehreren Gründen die perfekte Startrampe für das Ordinal-Ökosystem:",
+        para1:
+          "- Erstens ist es eine benutzerfreundliche und sichere Plattform, die es Benutzern ermöglicht, sich leicht an den vielversprechendsten Projekten von Ordinal zu beteiligen, bevor sie gestartet werden. Aufgrund des einfachen und intuitiven Designs unserer Plattform können selbst diejenigen, die neu in Kryptowährung und DeFi sind, leicht auf der Plattform navigieren und ohne technische Kenntnisse an Projekten teilnehmen.",
+        para2:
+          "- Zweitens hat Ordinal Pad verschiedene Funktionen integriert, die es Benutzern erleichtern, ihre Token zu staken, um einen großzügigen Ertrag zu erzielen, während sie auf den Start neuer Projekte warten. Darüber hinaus bauen wir eine starke Community von Benutzern und Entwicklern auf, die arbeiten ständig daran, die Plattform zu verbessern, neue Funktionen hinzuzufügen und bestehende zu optimieren.",
+        para3:
+          "Insgesamt machen die Zugänglichkeit, die benutzerfreundliche Oberfläche und die robusten Funktionen von Ordinal Pad das perfekte Startfeld für das Ordinal-Ökosystem.",
+        btn1: "Weißes Papier",
+        tags: "Stichworte",
+        social: "Soziales",
       },
     },
   },

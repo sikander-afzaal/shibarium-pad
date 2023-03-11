@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "../../components/Button";
 
-const Description = () => {
+const Description = ({ content }) => {
   const [tab, setTab] = useState("desc");
   return (
     <div className="mt-[100px]  bg-descBg bg-cover lg:bg-contain bg-center lg:mb-[13vw] 2xl:mb-[350px] wrapper relative isolate">
@@ -23,7 +23,7 @@ const Description = () => {
             {tab === "desc" && (
               <span className="w-full h-full bg-tab opacity-10 absolute left-0 bottom-0 -z-10"></span>
             )}
-            Description
+            {content.tab1}
           </button>
           <button
             onClick={() => setTab("token")}
@@ -36,45 +36,33 @@ const Description = () => {
             {tab === "token" && (
               <span className="w-full h-full bg-tab opacity-10 absolute left-0 bottom-0 -z-10"></span>
             )}
-            Token Sale
+            {content.tab2}
           </button>
         </div>
         <h2 className="title leading-[1.4]">
-          <span className="grText bg-yellowGr">Ordinal Pad</span> is the perfect
-          launchpad for the Ordinal ecosystem for several reasons:
+          <span className="grText bg-yellowGr">{content.titleGr}</span>{" "}
+          {content.title}
         </h2>
         <p className="dark:text-white text-black opacity-80 text-lg">
-          - Firstly, it is an user-friendly and secure platform that allows
-          users to easily participate in Ordinal's most promising projects
-          before they launch. Because of our platform's simple and intuitive
-          design, even those who are new to cryptocurrency and DeFi can easily
-          navigate the platform and start participating in projects without any
-          technical knowledge.
+          {content.para1}
         </p>
         <p className="dark:text-white text-black opacity-80 text-lg">
-          - Secondly, Ordinal Pad has integrated various features that make it
-          easy for users to stake their tokens in order to earn a generous
-          yield, while they are waiting for new project launches.. Additionally,
-          we are building a strong community of users and developers who are
-          constantly working to improve the platform, adding new features and
-          optimizing existing ones.
+          {content.para2}
         </p>
         <p className="dark:text-white text-black opacity-80 text-lg">
-          Overall, Ordinal Pad's accessibility, user-friendly interface, and
-          robust features set make it the perfect launchpad for the Ordinal
-          ecosystem.
+          {content.para3}
         </p>
-        <Button>Whitepaper</Button>
+        <Button>{content.btn1}</Button>
         <div className="flex md:flex-row flex-col justify-between gap-3 md:gap-0 items-center w-full">
           <p className="dark:text-white text-black font-semibold text-lg">
-            Tags:{" "}
+            {content.tags}:{" "}
             <span className="grText bg-yellowGr">
               #featured #ordinal #bone #launchpad #artnft
             </span>
           </p>
           <div className="flex justify-start items-center gap-5">
             <p className="dark:text-white text-black font-semibold text-lg">
-              Socials:
+              {content.social}:
             </p>
             <a href="#" target="blank" className="w-5 object-contain">
               <img src="/twitter-gold.png" alt="" />

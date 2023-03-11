@@ -1,11 +1,11 @@
 import Description from "./Description";
 import Details from "./Details";
 
-const DetailsIndex = () => {
+const DetailsIndex = ({ content }) => {
   return (
     <div className="w-full pb-[150px]">
-      <Details />
-      <Description />
+      <Details content={content.hero} />
+      <Description content={content.desc} />
     </div>
   );
 };
