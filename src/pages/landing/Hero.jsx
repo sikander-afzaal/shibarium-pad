@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import Button from "../../components/Button";
+import ToolTip from "../../components/ToolTip";
 
 const Hero = ({ content }) => {
   return (
@@ -8,7 +10,7 @@ const Hero = ({ content }) => {
           <button className="bg-text dark:bg-white border-none  rounded-[10px] px-6 py-4 uppercase text-white dark:text-text font-medium">
             {content.btn1}
           </button>
-          <h2 className="leading-[1.3] text-[30px] sm:text-[46px] xl:text-[56px] font-bold dark:text-white text-black">
+          <h2 className="leading-[1.3] text-[30px] sm:text-[46px] xl:text-[56px] font-bold dark:text-white text-primary-bg">
             {content.title}{" "}
             <span className=" bg-yellowGr grText ">{content.titleGr}</span>
           </h2>
@@ -19,17 +21,19 @@ const Hero = ({ content }) => {
             </span>
           </p>
           <div className="flex justify-start w-full sm:flex-row flex-col items-center gap-5">
-            <Button classes={"w-full sm:w-auto"}>{content.btn2}</Button>
-            <Button disabled classes={"w-full sm:w-auto"}>
-              {content.btn3}
+            <Button classes={"w-full sm:w-auto relative group"}>
+              <ToolTip direction="up" /> {content.btn2}
             </Button>
+            <a href="https://t.me/ordinalpadpresales" target={"blank"}>
+              <Button classes={"w-full sm:w-auto"}>{content.btn3}</Button>
+            </a>
           </div>
           <div className="flex justify-start sm:flex-row flex-col items-center gap-5">
             <div className="flex justify-start gap-2  items-center sm:items-start flex-col">
               <h3 className="text-[46px] font-bold text-yellow leading-[1]">
                 0
               </h3>
-              <p className="text-base uppercase font-medium dark:text-white text-black">
+              <p className="text-base uppercase font-medium dark:text-white text-primary-bg">
                 {content.value1}
               </p>
             </div>
@@ -37,7 +41,7 @@ const Hero = ({ content }) => {
               <h3 className="text-[46px] font-bold text-yellow leading-[1]">
                 0
               </h3>
-              <p className="text-base uppercase font-medium dark:text-white text-black">
+              <p className="text-base uppercase font-medium dark:text-white text-primary-bg">
                 {content.value2}
               </p>
             </div>
@@ -45,7 +49,7 @@ const Hero = ({ content }) => {
               <h3 className="text-[46px] font-bold text-yellow leading-[1]">
                 0
               </h3>
-              <p className="text-base uppercase font-medium dark:text-white text-black">
+              <p className="text-base uppercase font-medium dark:text-white text-primary-bg">
                 {content.value3}
               </p>
             </div>
@@ -70,11 +74,11 @@ const Hero = ({ content }) => {
                 <h4 className="text-yellow text-[26px] font-bold">
                   Ordinal Pad #01
                 </h4>
-                <p className="dark:text-white text-black text-lg">
+                <p className="dark:text-white text-primary-bg text-lg">
                   {content.cardText.date}: <strong>04.01.2023</strong>
                 </p>
               </div>
-              <h5 className="flex justify-start items-center gap-2 dark:text-white text-black text-[22px] font-semibold">
+              <h5 className="flex justify-start items-center gap-2 dark:text-white text-primary-bg text-[22px] font-semibold">
                 $OPAD{" "}
                 <img
                   src="/check.png"
@@ -82,22 +86,24 @@ const Hero = ({ content }) => {
                   alt=""
                 />
               </h5>
-              <p className="text-base leading-[1.4] sm:text-lg dark:text-white text-black opacity-80">
+              <p className="text-base leading-[1.4] sm:text-lg dark:text-white text-primary-bg opacity-80">
                 {content.cardText.desc}
               </p>
               <div className="flex w-full flex-col sm:flex-row justify-start items-center gap-4">
-                <Button classes={"w-full sm:w-auto h-[50px]"}>
-                  {content.cardText.btn1}
-                </Button>
+                <Link to={"/details"}>
+                  <Button classes={"w-full sm:w-auto h-[50px]"}>
+                    {content.cardText.btn1}
+                  </Button>
+                </Link>
                 <Button disabled classes={"w-full sm:w-auto h-[50px]"}>
                   {content.cardText.btn2}
                 </Button>
               </div>{" "}
               <div className="flex sm:items-center justify-between items-start flex-col sm:flex-row gap-2 w-full">
-                <p className="dark:text-white text-black opacity-80 text-lg">
+                <p className="dark:text-white text-primary-bg opacity-80 text-lg">
                   {content.cardText.price}: <strong> $0.004</strong>
                 </p>
-                <p className="dark:text-white text-black opacity-80 text-lg">
+                <p className="dark:text-white text-primary-bg opacity-80 text-lg">
                   {content.cardText.allocation}: NO
                 </p>
               </div>

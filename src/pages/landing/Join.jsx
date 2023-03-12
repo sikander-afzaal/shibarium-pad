@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Join = ({ content }) => {
   return (
     <div className="wrapper">
@@ -10,13 +12,15 @@ const Join = ({ content }) => {
         <h2 className="text-[30px] xl:text-[46px]  font-bold text-white">
           {content.title}
         </h2>
-        <button
+        <a
+          target="blank"
+          href="https://t.me/ordinalpadpresales"
           className={
             "bg-white disabled:cursor-not-allowed flex justify-center items-center leading-[1] rounded-[10px] p-5 text-dark border-none font-semibold text-lg  "
           }
         >
           {content.btn}
-        </button>
+        </a>
       </div>
     </div>
   );

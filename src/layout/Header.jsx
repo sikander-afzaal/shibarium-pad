@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import ToolTip from "../components/ToolTip";
 
 const Header = ({ language, setLanguage, content }) => {
   const [headerToggle, setHeaderToggle] = useState(false);
@@ -39,15 +40,16 @@ const Header = ({ language, setLanguage, content }) => {
           <Link
             onClick={() => setHeaderToggle(false)}
             to={"/"}
-            className="text-white  font-normal text-lg"
+            className="text-white relative group   font-normal text-lg"
           >
+            <ToolTip direction="bottom" />
             {content.link2}
           </Link>
           <div className="flex justify-center items-center flex-col relative">
             <button
               onClick={() => {
                 if (language === "EN") {
-                  setLanguage("GER");
+                  setLanguage("CN");
                 } else {
                   setLanguage("EN");
                 }
@@ -65,9 +67,9 @@ const Header = ({ language, setLanguage, content }) => {
                 </>
               ) : (
                 <>
-                  GER
+                  CN
                   <img
-                    src="/flag2.png"
+                    src="/flag2.webp"
                     className="w-[37px] object-contain"
                     alt=""
                   />
@@ -75,8 +77,9 @@ const Header = ({ language, setLanguage, content }) => {
               )}
             </button>
           </div>
-          <button className="text-dark p-4 text-lg font-semibold bg-yellowGr rounded-lg border-none flex justify-center items-center gap-3">
+          <button className="text-dark relative group p-4 text-lg font-semibold bg-yellowGr rounded-lg border-none flex justify-center items-center gap-3">
             {content.connect}
+            <ToolTip direction="bottom" />
           </button>
           <button
             onClick={() => setDarkMode((prev) => !prev)}

@@ -38,7 +38,7 @@
     @apply bg-clip-text text-transparent;
   }
   .title {
-    @apply text-[30px] xl:text-[46px]  font-bold dark:text-white text-black;
+    @apply text-[30px] xl:text-[46px]  font-bold dark:text-white text-primary-bg;
   }
   .grTitle {
     @apply text-[30px] xl:text-[46px]  font-bold grText bg-yellowGr;

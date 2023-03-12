@@ -25,7 +25,7 @@ const App = () => {
     <>
       <Header
         content={
-          language === "EN" ? content.english.header : content.german.header
+          language === "EN" ? content.english.header : content.chinese.header
         }
         language={language}
         setLanguage={setLanguage}
@@ -37,7 +37,7 @@ const App = () => {
               content={
                 language === "EN"
                   ? content.english.landing
-                  : content.german.landing
+                  : content.chinese.landing
               }
             />
           }
@@ -49,7 +49,7 @@ const App = () => {
               content={
                 language === "EN"
                   ? content.english.projectDetails
-                  : content.german.projectDetails
+                  : content.chinese.projectDetails
               }
             />
           }
@@ -58,7 +58,7 @@ const App = () => {
       </Routes>
       <Footer
         content={
-          language === "EN" ? content.english.footer : content.german.footer
+          language === "EN" ? content.english.footer : content.chinese.footer
         }
       />
     </>

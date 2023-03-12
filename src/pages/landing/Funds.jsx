@@ -28,10 +28,10 @@ export default Funds;
 const FundBox = ({ value, desc }) => {
   return (
     <div className="flex flex-col bg-white bg-opacity-5 min-h-[180px] gap-3 rounded-[10px]  border border-solid border-[#FFC201]  justify-center items-center w-full">
-      <h2 className="dark:text-white text-black leading-[1] font-bold text-[58px]">
+      <h2 className="dark:text-white text-primary-bg leading-[1] font-bold text-[58px]">
         {value}
       </h2>
-      <p className="dark:text-white text-black font-medium leading-[1] text-lg">
+      <p className="dark:text-white text-primary-bg font-medium leading-[1] text-lg">
         {desc}
       </p>
     </div>

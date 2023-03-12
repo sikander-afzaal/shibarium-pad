@@ -98,10 +98,10 @@ const BrandCard = ({ translation }) => {
         alt=""
       />
       <div className="px-2 flex justify-start items-start flex-col gap-2">
-        <h3 className="dark:text-white text-black text-xl font-semibold">
+        <h3 className="dark:text-white text-primary-bg text-xl font-semibold">
           Ordinal | @OrdianalGems
         </h3>
-        <p className="text-xl font-semibold dark:text-white text-black">
+        <p className="text-xl font-semibold dark:text-white text-primary-bg">
           148.5K {translation}
         </p>
       </div>
