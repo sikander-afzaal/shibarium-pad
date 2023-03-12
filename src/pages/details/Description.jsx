@@ -64,10 +64,18 @@ const Description = ({ content }) => {
             <p className="dark:text-white text-primary-bg font-semibold text-lg">
               {content.social}:
             </p>
-            <a href="#" target="blank" className="w-5 object-contain">
+            <a
+              href="https://twitter.com/ordinalpad"
+              target="blank"
+              className="w-5 object-contain"
+            >
               <img src="/twitter-gold.png" alt="" />
             </a>
-            <a href="#" target="blank" className="w-5 object-contain">
+            <a
+              href="https://t.me/ordinalpadpresales"
+              target="blank"
+              className="w-5 object-contain"
+            >
               <img src="/telegram-gold.png" alt="" />
             </a>
           </div>

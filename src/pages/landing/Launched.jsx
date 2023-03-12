@@ -8,9 +8,9 @@ const Launched = ({ content }) => {
           <span className="grText bg-yellowGr">{content.titleGr}</span>
         </h2>
         <div className="grid grid-cols-1 place-items-center xl:grid-cols-3 w-full gap-8 mt-8">
-          <LaunchedBox img={"/hero-nft.png"} translate={content} />
-          <LaunchedBox img={"/hero-nft.png"} translate={content} />
-          <LaunchedBox img={"/hero-nft.png"} translate={content} />
+          <LaunchedBox img={"/question.jpg"} translate={content} />
+          <LaunchedBox img={"/question.jpg"} translate={content} />
+          <LaunchedBox img={"/question.jpg"} translate={content} />
         </div>
       </div>
     </div>

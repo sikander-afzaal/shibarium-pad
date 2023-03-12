@@ -8,7 +8,7 @@ const How = ({ content }) => {
         <div className="relative w-[90%] sm:w-auto isolate">
           <div className="border -rotate-[9.15deg] border-yellow border-solid rounded-[10px] overflow-hidden">
             <img
-              src="/shiba.png"
+              src="/question.jpg"
               className="w-full aspect-square max-w-[546px]"
               alt=""
             />

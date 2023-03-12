@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
 import DetailsIndex from "./pages/details/DetailsIndex";
@@ -7,6 +7,7 @@ import Landing from "./pages/landing/Landing";
 import { language as content } from "./language";
 
 const App = () => {
+  const { pathname } = useLocation();
   const [language, setLanguage] = useState("");
   useEffect(() => {
     if (localStorage.getItem("language")) {
@@ -20,6 +21,9 @@ const App = () => {
       localStorage.setItem("language", language);
     }
   }, [language]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <>

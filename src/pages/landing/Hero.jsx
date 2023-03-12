@@ -61,7 +61,7 @@ const Hero = ({ content }) => {
           <div className="bg-white bg-opacity-5 border-2 border-solid border-[#FFC300]  rounded-[15px]  w-full max-w-[442px] p-2 flex justify-start items-start flex-col gap-3 overflow-hidden">
             <div className="relative w-full">
               <img
-                src="/hero-nft.png"
+                src="/question.jpg"
                 className="w-full rounded-[10px] aspect-square sm:aspect-video object-cover"
                 alt=""
               />

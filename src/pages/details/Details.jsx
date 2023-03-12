@@ -70,7 +70,7 @@ const Details = ({ content }) => {
             </div>
             <div className="flex justify-start items-center gap-5">
               <a
-                href="#"
+                href="https://twitter.com/ordinalpad"
                 target={"blank"}
                 className="flex justify-start items-center gap-2"
               >
@@ -84,7 +84,7 @@ const Details = ({ content }) => {
                 </p>
               </a>
               <a
-                href="#"
+                href="https://t.me/ordinalpadpresales"
                 target={"blank"}
                 className="flex justify-start items-center gap-2"
               >
