@@ -8,7 +8,7 @@ const Details = ({ content }) => {
         <div className="grid place-items-center grid-cols-1 grid-rows-[auto__1fr] xl:grid-rows-1 xl:grid-cols-2 w-full gap-10">
           <div className="w-full xl:max-w-none max-w-[600px] h-full border border-solid border-yellow rounded-[15px] bg-white bg-opacity-5 p-3">
             <img
-              src="/details-nft.png"
+              src="/question.jpg"
               className="w-full  object-cover h-full rounded-[15px]"
               alt=""
             />
